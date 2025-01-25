@@ -34,10 +34,13 @@ const AllBooks = () => {
             {loading && <p>loading...</p>}
             <ul>
                 {data? data.map(book => (
+                    <>
                     <li key={book._id}>
                         {book.title}
                         <button onClick={() => handleDelete(book._id)}>Delete</button>
                     </li>
+                    <br/>
+                    </>
                 )): error && <p>{error}</p>}
             </ul>
             <p>{successMessage}</p>
