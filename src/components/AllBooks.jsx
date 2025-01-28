@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const AllBooks = () => {
     const [successMessage, setMessage] = useState('');
-    const {data, loading, error} = useFetch('http://localhost:3000/allbooks');
+    const {data, loading, error} = useFetch('https://book-api-project-sepia.vercel.app/allbooks');
     //console.log(data);
 
     const handleDelete = async (bookId) => {
