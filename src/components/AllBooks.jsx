@@ -4,11 +4,11 @@ import useFetch from "../useFetch";
 const AllBooks = () => {
     const [successMessage, setMessage] = useState('');
     const {data, loading, error} = useFetch('https://book-api-project-sepia.vercel.app/allbooks');
-    //console.log(data);
+    console.log(data);
 
     const handleDelete = async (bookId) => {
         try{
-            const response = await fetch(`http://localhost:3000/books/delete/${bookId}`, {
+            const response = await fetch(`https://book-api-project-sepia.vercel.app/books/delete/${bookId}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type':'application/json'
